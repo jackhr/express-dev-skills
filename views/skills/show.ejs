@@ -8,13 +8,7 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-  <h1>Skills</h1>
-  <ul>
-    <% skills.forEach(function(s) { %>
-      <li>
-        <a href="/skills/<%= s.id %>"><%= s.skill %></a>
-      </li>
-    <% }); %>
-  </ul>
+  <a href="../skills">Go back</a>
+	<h3><%= skill.learned ? `I have already learned ${skill.skill}!` : `I have not yet learned ${skill.skill}...` %></h3>
 </body>
 </html>

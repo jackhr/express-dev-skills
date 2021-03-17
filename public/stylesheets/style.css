@@ -5,4 +5,13 @@ body {
 
 a {
   color: #00B7FF;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00a534;
+}
+
+ul {
+  list-style-type: square;
 }
