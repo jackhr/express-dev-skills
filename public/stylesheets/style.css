@@ -3,6 +3,14 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+body {
+  text-align: center;
+}
+
+h1 {
+  font-size: 50px;
+}
+
 a {
   color: #00B7FF;
   text-decoration: none;
@@ -12,6 +20,13 @@ a:hover {
   color: #00a534;
 }
 
+li {
+  font-size: 25px;
+  display: inline-block;
+  margin: 20px;
+}
+
+
 ul {
-  list-style-type: square;
+  list-style-type: none;
 }

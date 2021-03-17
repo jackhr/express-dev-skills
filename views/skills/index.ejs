@@ -8,13 +8,15 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
+  <a href="/">Go back</a>
+  <br>
   <h1>Skills</h1>
   <ul>
     <% skills.forEach(function(s) { %>
       <li>
         <a href="/skills/<%= s.id %>"><%= s.skill %></a>
       </li>
-    <% }); %>
+      <% }); %>
   </ul>
 </body>
 </html>
