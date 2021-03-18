@@ -8,9 +8,10 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-  <a class="space" href="../skills">Go back</a>
-  <a class="space" href="../">Go back further</a>
-  <h3><%= skill.learned ? `I have already learned ${skill.skill}!` : `I have not yet learned ${skill.skill}...` %></h3>
-  <a class="space" href="/skills/<%= skill.id %>/edit">Edit thine skill...</a>
+  <h1>New Skill</h1>
+  <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
+    <input type="text" value="<%= skill.skill %>" name="skill">
+    <button type="submit">Time to EVOLVE</button>
+  </form>
 </body>
 </html>

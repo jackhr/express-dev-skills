@@ -9,10 +9,25 @@ module.exports = {
   new: newSkill,
   create,
   delete: deleteSkill,
+  edit,
+  update,
+}
+
+function update(req, res) {
+  console.log(req.params.id, req.body);
+  Skill.update(req.params.id, req.body);
+  res.redirect(`/skills/${req.params.id}`);
+}
+
+function edit(req, res) {
+  // Find the skill to provide to the view
+  const skill = Skill.getOne(req.params.id);
+  res.render('skills/edit', { skill });
 }
 
 function deleteSkill(req, res) {
   Skill.deleteOne(req.params.id);
+  // We provide the path for the subsequent GET request
   res.redirect('/skills');
 };
 

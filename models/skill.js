@@ -1,19 +1,19 @@
 const skills = [
-  {id: 0000, skill: 'HTML',             learned: true},
-  {id: 0001, skill: 'CSS',              learned: true},
-  {id: 0010, skill: 'JS',               learned: true},
-  {id: 0011, skill: 'JQuery',           learned: true},
-  {id: 0100, skill: 'Markdown',         learned: true},
-  {id: 0101, skill: 'HTTP',             learned: false},
-  {id: 0110, skill: 'MongoDB',          learned: false},
-  {id: 0111, skill: 'Mongoose',         learned: false},
-  {id: 1000, skill: 'Regex',            learned: false},
-  {id: 1001, skill: 'Authentication',   learned: false},
-  {id: 1010, skill: 'SQL',              learned: false},
-  {id: 1011, skill: 'Python',           learned: false},
-  {id: 1100, skill: 'Django',           learned: false},
-  {id: 1101, skill: 'React',            learned: false},
-  {id: 1111, skill: 'Computer Science', learned: false}
+  {id: 725367, skill: 'HTML',             learned: true},
+  {id: 374556, skill: 'CSS',              learned: true},
+  {id: 657758, skill: 'JS',               learned: true},
+  {id: 576756, skill: 'JQuery',           learned: true},
+  {id: 253675, skill: 'Markdown',         learned: true},
+  {id: 885647, skill: 'HTTP',             learned: false},
+  {id: 743556, skill: 'MongoDB',          learned: false},
+  {id: 579866, skill: 'Mongoose',         learned: false},
+  {id: 857888, skill: 'Regex',            learned: false},
+  {id: 255765, skill: 'Authentication',   learned: false},
+  {id: 967578, skill: 'SQL',              learned: false},
+  {id: 545687, skill: 'Python',           learned: false},
+  {id: 755088, skill: 'Django',           learned: false},
+  {id: 477565, skill: 'React',            learned: false},
+  {id: 117155, skill: 'Computer Science', learned: false}
 ];
 
 module.exports = {
@@ -21,7 +21,15 @@ module.exports = {
   getOne,
   create,
   deleteOne,
+  update,
 };
+
+function update(id, skill) {
+  id = parseInt(id);
+  const idx = skills.findIndex(skill => skill.id === id);
+  skill.id = id;
+  skills.splice(idx, 1, skill);
+}
 
 function deleteOne(id) {
   id = parseInt(id);
@@ -31,7 +39,7 @@ function deleteOne(id) {
 
 function create(skill) {
   // Add the id
-  skill.id = Date.now() % 10000;
+  skill.id = Date.now() % 1000000;
   // New skill to learn ain't learned as yet!
   skill.learned = false;
   skills.push(skill);
