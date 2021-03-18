@@ -8,12 +8,13 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
+  <a class="space" href="/skills/<%= skill.id %>">Go back</a>
   <h1>New Skill</h1>
   <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
     <input type="text" value="<%= skill.skill %>" name="skill">
-    <button type="submit">Time to EVOLVE</button>
+    <button id="evolve" type="submit"><b>EVOLVE</b></button>
     <br>
-    <input type="checkbox" name="learned" <%= skill.learned ? 'checked' : '' %>> I know all the syntax
+    <input class="checkbox" type="checkbox" name="learned" <%= skill.learned ? 'checked' : '' %>> I know all the syntax
   </form>
 </body>
 </html>

@@ -34,9 +34,9 @@ ul {
   margin: 0 20px;
 }
 
-/* .delete-form {
-  display: inline-block;
-} */
+.checkbox {
+  margin-top: 20px;
+}
 
 .destroy {
   height: 20px;
@@ -48,4 +48,35 @@ ul {
 
 .destroy:hover {
   color: rgb(193, 160, 29)
+}
+
+#evolve {
+  border: none;
+  background: none;
+  color: green;
+  animation: pulse 5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    color: red;
+  }
+  17% {
+    color: orange;
+  }
+  34% {
+    color: green;
+  }
+  51% {
+    color: blue;
+  }
+  68% {
+    color: green;
+  }
+  82% {
+    color: orange;
+  }
+  100% {
+    color: red;
+  }
 }
