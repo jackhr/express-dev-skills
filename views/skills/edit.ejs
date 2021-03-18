@@ -12,6 +12,8 @@
   <form action="/skills/<%= skill.id %>?_method=PUT" method="POST" autocomplete="off">
     <input type="text" value="<%= skill.skill %>" name="skill">
     <button type="submit">Time to EVOLVE</button>
+    <br>
+    <input type="checkbox" name="learned" <%= skill.learned ? 'checked' : '' %>> I know all the syntax
   </form>
 </body>
 </html>

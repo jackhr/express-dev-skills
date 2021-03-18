@@ -14,7 +14,7 @@ module.exports = {
 }
 
 function update(req, res) {
-  console.log(req.params.id, req.body);
+  req.body.learned = !!req.body.learned;
   Skill.update(req.params.id, req.body);
   res.redirect(`/skills/${req.params.id}`);
 }

@@ -10,7 +10,8 @@
 <body>
   <a class="space" href="../skills">Go back</a>
   <a class="space" href="../">Go back further</a>
-  <h3><%= skill.learned ? `I have already learned ${skill.skill}!` : `I have not yet learned ${skill.skill}...` %></h3>
+  <h1><%= skill.skill %></h1>
+  <h3><%= skill.learned ? `I have already learned it!` : `I have not yet learned it...` %></h3>
   <a class="space" href="/skills/<%= skill.id %>/edit">Edit thine skill...</a>
 </body>
 </html>
