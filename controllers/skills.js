@@ -8,7 +8,12 @@ module.exports = {
   show,
   new: newSkill,
   create,
+  // delete: deleteSkill,
 }
+
+// function deleteSkill(req, res) {
+
+// };
 
 function create(req, res) {
   console.log(req.body);

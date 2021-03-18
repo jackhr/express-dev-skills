@@ -33,3 +33,19 @@ ul {
 .space {
   margin: 0 20px;
 }
+
+/* .delete-form {
+  display: inline-block;
+} */
+
+.destroy {
+  height: 20px;
+  border: none;
+  background-color: white;
+  color: rgba(196, 67, 67, 0.482);
+  font-size: 11px;
+}
+
+.destroy:hover {
+  color: rgb(193, 160, 29)
+}
